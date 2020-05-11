@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 STATUS = (
@@ -16,7 +17,8 @@ class Post(models.Model):
     author = models.ForeignKey(
       User, on_delete=models.CASCADE, related_name='blog_posts')
     updated_at = models.DateTimeField(auto_now=True)
-    content = RichTextField(blank=True, null=True, config_name='special')
+    content = RichTextUploadingField(
+        blank=True, null=True, config_name='special')
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
