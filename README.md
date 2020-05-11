@@ -1,4 +1,5 @@
 How to:
+
 https://djangocentral.com/building-a-blog-application-with-django/
 https://docs.docker.com/compose/django/
 https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/
@@ -43,5 +44,6 @@ chmod +x entrypoint.sh
 
 http://localhost:8000/
 
+clear cache history
 
 stopped at GUNICORN
