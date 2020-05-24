@@ -1,14 +1,29 @@
+{% load static %}
+
 {% block sidebar %}
 
 <!-- Sidebar Widgets Column -->
 <div class="col-md-4 float-right ">
-<div class="card my-4">
-        <h5 class="card-header">About Me</h5>
-    <div class="card-body">
-        <p class="card-text">Hello, World!</p>
-        <a href="" class="btn-default">Know more!</a>
+    <div class="row">
+        <div class="card my-4">
+            <div class="sidebar-card">
+                <div class="card-title">
+                    About Me
+                </div>
+                <div class="image-container">
+                    <img class="profile-picture" src="{% static 'img/profile-picture.png' %}" alt="My image">
+                </div>
+                <div class="content">
+                    <h4>Gabriel</h4>
+                    <p>Bug developer and my father's son.</p>
+                    <p>Night gathers, and now my coding begins. It shall not end until I understand what I wrote at last week.</p>
+                    <a href="" class="btn-default">Know more!</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-</div>
+
+
 
 {% endblock sidebar %}
