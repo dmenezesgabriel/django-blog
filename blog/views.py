@@ -1,5 +1,6 @@
 from django.views import generic
 from django.shortcuts import render, get_object_or_404
+from django.db.models import Q
 from blog.forms import CommentForm
 from blog.models import Post
 
@@ -8,6 +9,19 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_at")
     template_name = "index.html"
     paginate_by = 3
+
+
+class SearchResultsView(generic.ListView):
+    template_name = "index.html"
+    paginate_by = 3
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        return (
+            Post.objects
+            .filter(Q(content__icontains=query), status=1)
+            .order_by("-created_at")
+        )
 
 
 def post_detail(request, slug):
