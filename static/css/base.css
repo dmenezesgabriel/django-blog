@@ -80,6 +80,10 @@ a, a:hover, a:focus {
     background: #28a745;
 }
 
+#sidebar p {
+    color: #fff;
+}
+
 #sidebarCollapse {
     width: 40px;
     height: 40px;
@@ -132,6 +136,7 @@ a, a:hover, a:focus {
     margin: auto;
     max-width: 100%;
     height: auto;
+    margin-bottom: 10px;
 }
 
 .profile-section .bio {
@@ -259,8 +264,8 @@ code {
     }
 
     #dismiss {
+        margin-top: 40px;
         position: relative;
-
     }
 
     .profile-section .profile-image {
