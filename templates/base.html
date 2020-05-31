@@ -37,15 +37,17 @@
 
         <!-- Sidebar -->
         <nav class="col-md-2 d-md-block sidebar" id="sidebar">
-            <button id="dismiss" onClick="closeNav()" class="btn">
-                <i class="fas fa-arrow-left"></i>
-            </button>
-            <div class="sidebar-header text-center">
-                <h3>
-                    <a class="blog-name" href="{% url 'home' %}">Coding Gabriel</a>
-                </h3>
-            </div>
             <ul class="list-unstyled components text-center">
+                <li>
+                    <button id="dismiss" onClick="closeNav()" class="btn close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </li>
+                <div class="sidebar-header text-center">
+                    <h3>
+                        <a class="blog-name" href="{% url 'home' %}">Coding Gabriel</a>
+                    </h3>
+                </div>
                 <div class="profile-section">
                     <img class="profile-image" src="{% static 'img/profile-picture.png' %}" alt="My image">
                     <div class="bio text-center">
@@ -55,34 +57,29 @@
                     </div>
                     <div class="social-list">
                         <li class="list-inline-item">
-                            <a href="#" class="list-inline py-1 mx-auto">
+                            <a href="https://github.com/dmenezesgabriel" class="list-inline py-1 mx-auto" target="_blank">
                                 <i class="fab fa-github"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" class="list-inline py-1 mx-auto">
+                            <a href="https://twitter.com/dmenezesgabriel" class="list-inline py-1 mx-auto" target="_blank">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" class="list-inline py-1 mx-auto">
+                            <a href="https://www.linkedin.com/in/dmenezesgabriel/" class="list-inline py-1 mx-auto" target="_blank">
                                 <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="list-inline py-1 mx-auto">
-                                <i class="fab fa-github"></i>
                             </a>
                         </li>
                     </div>
                 </div>
                 <hr>
                 <li>
-                    <a href="#"> Home</a>
+                    <a href="{% url 'home' %}">Home</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#"> About</a>
-                </li>
+                </li> -->
             </ul>
             <hr>
         </nav>
@@ -96,6 +93,10 @@
                             <span></span>
                             <span></span>
                         </button>
+                        <form class="form-inline mt-2 mt-md-0">
+                            <input type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
                 </div>
             </nav>
             {% block content %}
