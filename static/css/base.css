@@ -11,7 +11,7 @@ body {
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
@@ -37,7 +37,7 @@ a, a:hover, a:focus {
     top: 0;
     /* Viewport hight: the initial height of the sidebar will be at least equal to the screen heigth */
     /* It's height will increase when the page content increase */
-    height: 100vh;
+    height: 100%;
     background: #28a745;
     color: #fff;
     transition: all 0.3s;
@@ -120,7 +120,7 @@ a, a:hover, a:focus {
     transform: none;
     /* all bars are visible */
     opacity: 1;
-    margin: 5px auto;
+    margin: 3px auto;
 }
 
 .profile-section {
@@ -235,8 +235,12 @@ code {
         transform: none;
         z-index: 1;
         height: 100%;
-        width: 100%;
+        width: auto;
 
+    }
+
+    .profile-section .profile-image {
+        width: 160px;
     }
 
     .navbar {
@@ -244,7 +248,6 @@ code {
         position: relative;
         display: flex;
         padding: 15px 10px;
-        background: #28a745;
         border: none;
         border-radius: 0;
         margin-bottom: 40px;
@@ -256,14 +259,8 @@ code {
     }
 
     #dismiss {
-        width: 35px;
-        height: 35px;
-        position: absolute;
-        /* top right corner of the sidebar */
-        margin-left: 0;
-        top: 20px;
-        right: 50px;
-        padding: 20px;
+        position: relative;
+
     }
 
     .profile-section .profile-image {
@@ -274,12 +271,10 @@ code {
     }
 
     .fa-arrow-left {
-        margin: auto;
-        height: 50%;
-        transform: translate(-50%, -50%);
-        width: 10px;
-        height: 10px;
+        position: relative;
         display: block;
+        position: relative;
+        margin-top: -10;
     }
 
     /* Reversing the behavior of the bars:
