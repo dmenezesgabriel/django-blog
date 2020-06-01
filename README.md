@@ -46,4 +46,7 @@ http://localhost:8000/
 
 clear cache history
 
-stopped at GUNICORN
+Production:
+docker-compose -f docker-compose.prod.yml down -v
+docker-compose -f docker-compose.prod.yml up -d --build
+docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
