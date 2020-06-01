@@ -39,7 +39,7 @@
         <form method="post" style="margin-top: 1.3em;">
           {{ comment_form | crispy }}
           {% csrf_token %}
-          <button type="submit" class="btn-default">Submit</button>
+          <button type="submit" class="btn btn-secondary">Submit</button>
         </form>
         {% endif %}
       </div>
