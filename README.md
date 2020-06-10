@@ -53,3 +53,6 @@ This application was created in order to register and demonstrate my learnings, 
 - Host on development environment: http://localhost:8000/
 - Host on production environment: http://localhost:1337/
 - Run docker compose specific file: `docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput`
+
+## Image
+![](images/dogo-blog.png)
